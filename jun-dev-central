@@ -12,3 +12,19 @@ const people = [
     { firstName: 'Antonio', lastName: 'Gonzalez', DOB: '03/24/1985', department: 'Office Management', salary: '49000' },
     { firstName: 'Aaron', lastName: 'Garrett', DOB: '09/04/1985', department: 'Development', salary: '39000' },
 ];
+
+// Exercises
+
+// 1) What is the average income of all the people in the array?
+
+
+// 2) Who are the people that are currently older than 30?
+
+
+// 3) Get a list of the people's full name (firstName and lastName).
+
+
+// 4) Get a list of people in the array ordered from youngest to oldest.
+
+
+// 5) How many people are there in each department?
