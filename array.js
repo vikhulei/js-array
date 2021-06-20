@@ -36,4 +36,9 @@ const fullNamesInList = (arr) => {
     }
 }
 
-console.log(fullNamesInList(people))
+const getDepartments = arr => {
+    return arr.reduce((acc, person) => ({...acc, [person.department]: acc[person.department] + 1 || 1}), {})
+    
+}
+
+console.log(getDepartments(people))

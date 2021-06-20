@@ -28,3 +28,7 @@ const people = [
 
 
 // 5) How many people are there in each department?
+
+// 6) How many times is letter repeated in the string?
+
+
