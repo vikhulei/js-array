@@ -26,4 +26,14 @@ const older30 = (arr) => {
         return newArr.map(({firstName, lastName}) => `${firstName} ${lastName}`)
 }
 
-console.log(older30(people))
+const fullNamesInArray = (arr) => {
+    return arr.map(({firstName, lastName}) => `${firstName} ${lastName}`)
+}
+
+const fullNamesInList = (arr) => {
+    for(let x in arr) {
+        console.log(arr[x].firstName, arr[x].lastName)
+    }
+}
+
+console.log(fullNamesInList(people))
