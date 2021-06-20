@@ -19,5 +19,11 @@ const res = (arr) => {
     }, 0) / arr.length)
 }
 
+const older30 = (arr) => {
+        let newArr = []
+        newArr = arr.filter(value => (new Date().getFullYear() - new Date(value.DOB).getFullYear()) > 30)
+        
+        return newArr.map(({firstName, lastName}) => `${firstName} ${lastName}`)
+}
 
-console.log(res(people))
+console.log(older30(people))
