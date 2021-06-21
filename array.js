@@ -41,7 +41,7 @@ const getDepartments = arr => {
     
 }
 
-console.log(getDepartments(people))
+//console.log(getDepartments(people))
 
 const orders = [
     { orderId: '123', customerId: '123', deliveryDate: '01-01-2020', delivered: true, items: [
@@ -112,10 +112,36 @@ getResults = (arr) => {
   return arr.some(el => el.customerId==="123")
 }
 
-console.log(getResults(orders))
-
 // 5) Have any products with an id of 123 been sold?
 
+// const orders = [
+//   { orderId: '123', customerId: '123', deliveryDate: '01-01-2020', delivered: true, items: [
+//       { productId: '123', price: 55 },
+//       { productId: '234', price: 30 },
+//   ]},
+//   { orderId: '234', customerId: '234', deliveryDate: '01-02-2020', delivered: false, items: [
+//       { productId: '234', price: 30 },
+//   ]},
+//   { orderId: '345', customerId: '234', deliveryDate: '05-01-2020', delivered: true, items: [
+//       { productId: '567', price: 30 },
+//       { productId: '678', price: 80 },
+//   ]},
+//   { orderId: '456', customerId: '345', deliveryDate: '12-01-2020', delivered: true, items: [
+//       { productId: '789', price: 12 },
+//       { productId: '890', price: 90 },
+//   ]},
+//       { orderId: '578', customerId: '456', deliveryDate: '12-01-2020', delivered: true, items: [
+//       { productId: '901', price: 43 },
+//       { productId: '123', price: 55 },
+//   ]},
+// ];
 
+getResults = (arr) => {
+  return arr.some(val => val.items.some(val => val.productId === "901"))
+}
 
+getResults = (arr) => {
+  return arr.reduce((a,b) => a + (b.items.reduce((c,d) => c + (d.productId === "123"), 0)), 0)
+}
 
+console.log(getResults(orders))
