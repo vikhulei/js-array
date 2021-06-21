@@ -67,7 +67,7 @@ const orders = [
 
 // 1) Get a list of the orders for the customer with the ID 234 that have not been delivered.
 
-const getResults = (arr) => {
+let getResults = (arr) => {
   const result = arr.filter(el => el.orderId==='234')
   result.forEach(element => {
       if(element.delivered===false) {
@@ -81,23 +81,23 @@ const getResults = (arr) => {
 
 // 2) Create a new property on each order with the total price of items ordered.
 
-const getResults = (arr) => {
+getResults = (arr) => {
   return arr.map(value => ({...value, total: value.items.reduce((a,b) => a + b.price, 0)}))
 }
 
 // 3) Have all the orders been delivered?
 
-const getResults = (arr) => {
+getResults = (arr) => {
   return arr.filter(el => el.delivered===false)
 }
 
-const getResults = (arr) => {
+getResults = (arr) => {
   return arr.every(el => el.delivered)
 }
 
 // 4) Has the customer with ID '123' made any orders?
 
-const getResults = (arr) => {
+getResults = (arr) => {
   return arr.filter(el => {
     if(el.customerId==="123") {
      return el
@@ -107,9 +107,14 @@ const getResults = (arr) => {
     })
 }
 
-const getResults = (arr) => {
+getResults = (arr) => {
+    
   return arr.some(el => el.customerId==="123")
 }
+
+console.log(getResults(orders))
+
+// 5) Have any products with an id of 123 been sold?
 
 
 
