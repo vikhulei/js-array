@@ -149,4 +149,20 @@ getResults = arr => {
   return newAr.filter(val => val.length !== 0)
 }
 
-console.log(getResults(orders))
+const getNested = (arr) => {
+  if (!arr || typeof(arr) !== "object") {
+    return "No array to process"
+  }
+  let depth = 1
+  let nested = 1
+  for (let x in arr) {
+    if (typeof(arr[x]) === "object") {
+      nested = getNested(arr[x]) + 1
+    }
+    depth = Math.max(depth, nested)
+  }
+  return depth
+}
+
+console.log(getNested([ {id: [1,[3]]}, [1,[5, [6]]] ]))
+
