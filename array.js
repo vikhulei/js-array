@@ -144,4 +144,9 @@ getResults = (arr) => {
   return arr.reduce((a,b) => a + (b.items.reduce((c,d) => c + (d.productId === "123"), 0)), 0)
 }
 
+getResults = arr => {
+  const newAr = arr.map(el => el.items.filter(val => val.productId==="123"))
+  return newAr.filter(val => val.length !== 0)
+}
+
 console.log(getResults(orders))
