@@ -166,6 +166,9 @@ const getNested = (arr) => {
 
 // console.log(getNested([ {id: [1,[3]]}, [1,[5, [6]]] ]))
 
+// REGULAR EXPRESSIONS
+
+
 const ex1 = 'The quick brown fox jumped over the lazy dog';
 const ex2 = 'A1B2C3D4E5F6G7H8I9J10';
 const ex3 = 'The salad costs $9.99';
@@ -177,12 +180,31 @@ let s1 = 'Their artwork is exceptional'
 let s2 = 'one plus tw0 is not three'
 let s3 = 'TRUSTWORTHY'
 
+//console.log(/two/.test(s3))
+
+
 // For the given array, filter all elements that do not contain e.
 let items = ['goal', 'new', 'user', 'sit', 'eat', 'dinner']
+//console.log(items.filter(val => /e/.test(val)))
 
-ex = new RegExp(/two/i)
+//Replace first occurrence of 5 with five for the given string.
+let ip = 'They ate 5 apples and 5 oranges'
+//console.log(ip.replace(/5/, "five"))
 
-console.log(ex.match(items))
+//Replace all occurrences of note irrespective of case with X
+ip = 'This note should not be NoTeD'
+//console.log(ip.replace(/note/ig, "X"))
+
+//For the given multiline input string, filter all lines NOT containing the string 2.
+let purchases = `items qty
+apple 24
+mango 50
+guava 42
+onion 31
+water 10`
+//console.log(purchases.split('\n').filter(val => !/2/.test(val)).join('\n'))
+
+
 
 // Exercise 01
 // Using a regex pattern, get the 3 letter words in the ex1 string.
