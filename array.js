@@ -13,6 +13,11 @@ const people = [
     { firstName: 'Aaron', lastName: 'Garrett', DOB: '09/04/1985', department: 'Development', salary: '39000' },
 ];
 
+//1. Get average salary
+//2. Get all who are older than 30
+//3. Return full name
+//4. How many people in each department
+
 const res = (arr) => {
     return Math.round(arr.reduce((a,b) => {
         return a + Number(b.salary)
